@@ -31,15 +31,21 @@ class App extends Component {
       let vowelsArray = currentWord.split("").filter(vowel => {
         return vowel === "a" || vowel === "e" || vowel === "i" || vowel === "o" || vowel === "u"
       })
-      console.log("vowelsArray:", vowelsArray)
+     // console.log("vowelsArray:", vowelsArray)
+     // console.log(currentWord.indexOf(vowelsArray[0]))
 
       // your code here!
-
+      let array = currentWord.split("")
+      for(let i=0;i<array.indexOf(vowelsArray[0]);i++) {
+       let char = array.shift()
+        array.push(char)
+      }
+      console.log(array.join(""))
       // Remember: console.log is your friend :)
 
 
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
-      return currentWord
+     // console.log (currentWord)
     })
 
 
